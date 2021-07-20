@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Loopstudios landing page</title>
+
+</head>
+
+<body>
+
+  <!-- ----------------- Logo + Nav Bar + Big Text ------------- -->
+
+  <header>
+    <div class="nav">
+      <div class="header-logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="nav--items">
+        <div class="mob">
+          <img src="./images/icon-hamburger.svg" alt="icon-hamburger">
+        </div>
+        <ul>
+          <li><a href="#!">About</a></li>
+          <li><a href="#!">Careers</a></li>
+          <li><a href="#!">Events</a></li>
+          <li><a href="#!">Products</a></li>
+          <li><a href="#!">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="big-text">
+      <h1>Immersive experiences that deliver</h1>
+    </div>
+  </header>
+
+  <!-- ----------------- Leader ------------- -->
+
+  <section id="leader">
+    <div class="leader--container">
+      <div class="leader--img">
+        <img src="images/desktop/image-interactive.jpg" alt="image-interactive">
+      </div>
+      <div class="leader--text">
+        <h1>The leader in interactive VR</h1>
+        <p> Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning
+          creations have transformed businesses through digital experiences that bind
+          to their brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------- Creations ------------- -->
+  <section id="creations">
+    <div class="creations--container">
+      <div class="our--creations">
+        <h1>Our creations</h1>
+        <button class="btn btn-desktop"><a href="#!">See all</a></button>
+      </div>
+      <div class="grid--images">
+        <a href="#!">
+          <div class="item one">Deep <br> earth</div>
+        </a>
+        <a href="#!">
+          <div class="item two">Night <br> arcade</div>
+        </a>
+        <a href="#!">
+          <div class="item three">Soccer <br> team VR</div>
+        </a>
+        <a href="#!">
+          <div class="item four">The <br> grid</div>
+        </a>
+        <a href="#!">
+          <div class="item five">From up <br> above VR</div>
+        </a>
+        <a href="#!">
+          <div class="item six">Pocket <br> borealis</div>
+        </a>
+        <a href="#!">
+          <div class="item seven">The <br> curiosity</div>
+        </a>
+        <a href="#!">
+          <div class="item eight">Make it <br> fisheye</div>
+        </a>
+      </div>
+      <div class="end-creation">
+        <button class="btn btn-mobile"><a href="#!">See all</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ----------------- Footer ------------- -->
+  <footer>
+    <div class="footer-container">
+      <div class="first">
+        <div class="footer-logo">
+          <img src="./images/logo.svg" alt="logo">
+        </div>
+        <div class="social-media social-media-desktop">
+          <a href="#!">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook"></a>
+          <a href="#!">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter"></a>
+          <a href="#!">
+            <img src="./images/icon-pinterest.svg" alt="icon-pinterest"></a>
+          <a href="#!">
+            <img src="./images/icon-instagram.svg" alt="icon-instagram"></a>
+        </div>
+      </div>
+      <div class="second">
+        <div class="links">
+          <a href="#!">about</a>
+          <a href="#!">careers</a>
+          <a href="#!">events</a>
+          <a href="#!">Products</a>
+          <a href="#!">Support</a>
+        </div>
+        <div class="end-footer-social-media">
+          <div class="social-media social-media-mobile">
+            <a href="#!">
+              <img src="./images/icon-facebook.svg" alt="icon-facebook"></a>
+            <a href="#!">
+              <img src="./images/icon-twitter.svg" alt="icon-twitter"></a>
+            <a href="#!">
+              <img src="./images/icon-pinterest.svg" alt="icon-pinterest"></a>
+            <a href="#!">
+              <img src="./images/icon-instagram.svg" alt="icon-instagram"></a>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ---------------------------- Mobile Menu -------------------------- -->
+  <div class="menu-mobile">
+    <div class="nav">
+      <div class="header-logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <div class="close-btn">
+        <img src="./images/icon-close.svg" alt="close-btn">
+      </div>
+    </div>
+
+    <div class="links links-mobile">
+      <ul>
+        <li><a href="#!">About</a></li>
+        <li><a href="#!">Careers</a></li>
+        <li><a href="#!">Events</a></li>
+        <li><a href="#!">Products</a></li>
+        <li><a href="#!">Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script>
+    const btnOpen = document.querySelector('.mob')
+    const btnClose = document.querySelector('.close-btn')
+    const mobileMenu = document.querySelector('.menu-mobile')
+
+    btnOpen.addEventListener('click', () => {
+      mobileMenu.classList.add('active')
+    })
+
+    btnClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('active')
+    })
+  </script>
+</body>
+
+</html>
