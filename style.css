@@ -1,0 +1,748 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark-Gray: hsl(0, 0%, 55%);
+    --Very-Dark-Gray: hsl(0, 0%, 41%);
+    --non-body-font: 'Alata', sans-serif; 
+    --body-font: 'Josefin Sans', sans-serif;
+    --gradient:linear-gradient(0deg, rgba(0, 0, 0, 0.5) 30%,rgba(255, 255, 255, 0) 70%);
+    --gradient-white:linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8));
+
+    --gradient-mobile:linear-gradient(90deg, rgba(0, 0, 0, 0.5) 30%,rgba(255, 255, 255, 0) 70%);
+}
+
+body{
+    height: 100vh;
+    font-family: var(--body-font);
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    padding: 3.5rem 10rem;
+    background-size: cover;
+}
+
+.header-logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mob,.menu-mobile{
+    display: none;
+}
+
+.nav--items ul{
+    display: flex;
+    list-style: none;
+    gap: 2em;
+}
+
+.nav--items a{
+    color: rgba(255, 255, 255, 0.822);
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: var(--non-body-font);
+    position: relative;
+}
+
+.nav--items a::before{
+    opacity: 0;
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    bottom: -0.7em;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.822);
+}
+
+.nav--items a:hover::before{
+    opacity: 1;
+}
+
+.big-text{
+    border: white .15rem solid;
+    width: 60%;
+    padding: 2em;
+    margin: 7em 0;
+}
+
+.big-text h1{
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.leader--container{
+    display: grid;
+    grid-template-columns: 1fr 5rem 1fr;
+    grid-template-rows: 11rem 1fr;
+    padding: 9em 6.8em 9em 9em;
+}
+
+.leader--img{
+    grid-row: 1/-1;
+    grid-column: 1/-2;
+}
+
+.leader--text{
+    grid-row: -2/-1;
+    grid-column: -2/-1;
+    background-color: white;
+    padding: 6em 0 0 5em;
+}
+
+.leader--text h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.leader--text p{
+    font-family: var(--non-body-font);
+    font-size: .89em;
+    padding-top: 2em;
+    line-height: 1.7rem;
+    color: var(--Dark-Gray)
+}
+
+@media (max-width: 1315px){
+    .leader--text{
+        padding: 2.1em 0 0 2em;
+    }
+}
+
+.creations--container{
+    padding:9em;
+}
+
+.our--creations{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em 0;
+}
+
+.our--creations h1{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.btn-mobile{
+    display: none;
+}
+
+
+.btn{
+    padding: 0.5em 2em;
+    background-color: white;
+    border: var(--Dark-Gray) 2px solid;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover{
+    background-color: black;
+    border-color: black;
+}
+
+.btn:hover a{
+    color: white;;
+}
+
+.btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--non-body-font);
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    color: black;
+}
+
+
+
+.grid--images{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-rows: minmax(450px, 1fr) minmax(450px, 1fr);
+    gap: 2em;
+}
+
+.grid--images a{
+    text-decoration: none;
+}
+
+.item{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: 1em;
+    transition: color 0.5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.item:hover{
+    color: black;
+}
+
+/* Adding the transion on items .. REALLY LOOOONG*/
+
+.one{
+    background-image: var(--gradient),url(images/desktop/image-deep-earth.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.one::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: var(--gradient-white),url(images/desktop/image-deep-earth.jpg); 
+  z-index: -1;
+  transition: opacity 0.3s linear;
+  opacity: 0;
+}
+
+.one:hover::before{
+    opacity: 1;
+}
+
+.two{
+    background-image:var(--gradient), url(images/desktop/image-night-arcade.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.two::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-night-arcade.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.two:hover::before{
+    opacity: 1;
+}
+
+.three{
+    background-image: var(--gradient),url(images/desktop/image-soccer-team.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.three::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-soccer-team.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.three:hover::before{
+    opacity: 1;
+}
+
+.four{
+    background-image:var(--gradient), url(images/desktop/image-grid.jpg);
+    padding-right: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.four::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-grid.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.four:hover::before{
+    opacity: 1;
+}
+
+.five{
+    background-image:var(--gradient), url(images/desktop/image-from-above.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.five::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-from-above.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.five:hover::before{
+    opacity: 1;
+}
+
+.six{
+    background-image:var(--gradient), url(images/desktop/image-pocket-borealis.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.six::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-pocket-borealis.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.six:hover::before{
+    opacity: 1;
+}
+
+.seven{
+    background-image:var(--gradient), url(images/desktop/image-curiosity.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.seven::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-curiosity.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.seven:hover::before{
+    opacity: 1;
+}
+
+.eight{
+    background-image:var(--gradient), url(images/desktop/image-fisheye.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.eight::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-white),url(images/desktop/image-fisheye.jpg); 
+    z-index: -1;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.eight:hover::before{
+    opacity: 1;
+}
+
+footer{
+    background-color: black;
+}
+
+.footer-container{
+    padding: 3em 10em;
+}
+
+.first,.second{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first{
+    padding-bottom: 1.5em;
+}
+
+.footer-logo img{
+    height: 100%;
+    width: 100%;
+}
+
+.footer-logo{
+    width: 13%;
+}
+
+.social-media{
+    display: flex;
+    gap: 1em;
+}
+
+.social-media a{
+    position: relative;
+}
+
+.social-media a::before{
+    opacity: 0;
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    bottom: -0.4em;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: white;
+}
+
+.social-media a:hover::before{
+    opacity: 1;
+}
+
+.social-media-mobile{
+    display: none;
+}
+
+.links{
+    display: flex;
+    gap: 1.5em;
+}
+
+.links a{
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: var(--non-body-font);
+    color: rgba(255, 255, 255, 0.815);
+    text-transform: capitalize;
+    position: relative;
+}
+
+.links a::before{
+    opacity: 0;
+    transition: 0.3s;
+    content: "";
+    position: absolute;
+    bottom: -0.7em;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: white;
+}
+
+.links a:hover::before{
+    opacity: 1;
+}
+
+.copyright p{
+    color: rgba(255, 255, 255, 0.644);
+    font-family: var(--non-body-font);
+    font-weight: 300;
+    font-size: 0.85em;
+}
+
+@media (max-width: 1135px){
+    .nav--items ul{
+        display: none;
+    }
+
+    .mob{
+        display: flex;
+    }
+
+    header{
+        padding: 2.5rem 1.5rem;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(images/mobile/image-hero.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .big-text{
+        width: 100%;
+        padding: 1.5em;
+        margin: 9.5em 0 12em 0;
+    }
+
+    .big-text h1{
+        font-size: 2.5em;
+    }
+
+    .leader--container{
+        display: flex;
+        flex-direction: column;
+        padding: 6em 2em 0em 2em;
+    }
+
+    .leader--img img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .leader--text{
+        text-align: center;
+        padding: 3em 1em 0em 1em;
+    }
+
+    .leader--text h1{
+        font-size: 2em;
+    }
+
+    .leader--text p{
+        padding-top: 1.3em;
+    }
+
+    .creations--container{
+        padding: 1.7em;
+    }
+
+    .btn-mobile{
+        display: flex;
+        padding: 0.5em 3em;
+    }
+
+    .btn-mobile a{
+        font-size: 1.1em;
+        letter-spacing: 0.3em;
+    }
+
+    .end-creation{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em 0 5em 0;
+    }
+
+    .btn-desktop{
+        display: none;
+    }
+
+    .our--creations{
+        padding: 3em 0;
+        justify-content: center;
+    }
+
+    .our--creations h1{
+        font-size: 2.4em;
+    }
+
+    .grid--images{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item{
+        background-size: cover;
+        height: 100%;
+        padding: 3em 6.3em 1em 1em;
+        font-size: 1.5em;
+    }
+
+    .one{
+        background-image: var(--gradient-mobile),url(images/mobile/image-deep-earth.jpg);
+    }
+
+    .one::before{
+        background-image: var(--gradient-white),url(images/mobile/image-deep-earth.jpg); 
+        background-size: cover;
+    }
+
+    .two{
+        background-image: var(--gradient-mobile),url(images/mobile/image-night-arcade.jpg);
+    }
+
+    .two::before{
+        background-image: var(--gradient-white),url(images/mobile/image-night-arcade.jpg); 
+        background-size: cover;
+    }
+
+    .three{
+        background-image: var(--gradient-mobile),url(images/mobile/image-soccer-team.jpg);
+    }
+
+    .three::before{
+        background-image: var(--gradient-white),url(images/mobile/image-soccer-team.jpg); 
+        background-size: cover;
+    }
+
+    .four{
+        background-image: var(--gradient-mobile),url(images/mobile/image-grid.jpg);
+    }
+
+    .four::before{
+        background-image: var(--gradient-white),url(images/mobile/image-grid.jpg); 
+        background-size: cover;
+    }
+
+    .five{
+        background-image: var(--gradient-mobile),url(images/mobile/image-from-above.jpg);
+    }
+
+    .five::before{
+        background-image: var(--gradient-white),url(images/mobile/image-from-above.jpg); 
+        background-size: cover;
+    }
+
+    .six{
+        background-image: var(--gradient-mobile),url(images/mobile/image-pocket-borealis.jpg);
+    }
+
+    .six::before{
+        background-image: var(--gradient-white),url(images/mobile/image-pocket-borealis.jpg); 
+        background-size: cover;
+    }
+
+    .seven{
+        background-image: var(--gradient-mobile),url(images/mobile/image-curiosity.jpg);
+    }
+
+    .seven::before{
+        background-image: var(--gradient-white),url(images/mobile/image-curiosity.jpg); 
+        background-size: cover;
+    }
+
+    .eight{
+        background-image: var(--gradient-mobile),url(images/mobile/image-fisheye.jpg);
+    }
+
+    .eight::before{
+        background-image: var(--gradient-white),url(images/mobile/image-fisheye.jpg); 
+        background-size: cover;
+    }
+
+    .footer-container{
+        padding: 3.5em 0;
+    }
+
+    .first,.second,.links{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo{
+        width: 40%;
+    }
+
+    .social-media-mobile{
+        display: flex;
+    }
+
+    .social-media-desktop{
+        display: none;
+    }
+
+    .end-footer-social-media{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3.5em 0 1em 0;
+    }
+
+    .menu-mobile.active{
+        display: flex;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .links-mobile{
+        text-align: left;
+        padding: 9em 0;
+    }
+
+    .links-mobile ul{
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+    }
+
+    .links-mobile a{
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 300;
+        font-family: var(--body-font);
+    }
+
+    .links-mobile a::before{
+        bottom: -0.3em;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 360px){
+    .big-text h1{
+        font-size: 2em;
+    }
+
+    .leader--text h1{
+        font-size: 1.5em;
+    }
+
+    .our--creations h1{
+        font-size: 1.6em;
+    }
+
+    .item{
+        font-size: 1.1em;
+    }
+
+}
+
+@media (max-width: 280px){
+    .big-text h1{
+        font-size: 1.7em;
+    }
+
+    .leader--text h1{
+        font-size: 1.4em;
+    }
+}
