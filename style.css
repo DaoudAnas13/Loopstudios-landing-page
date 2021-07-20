@@ -178,7 +178,7 @@ header{
 
 .grid--images{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     grid-template-rows: minmax(450px, 1fr) minmax(450px, 1fr);
     gap: 2em;
 }
@@ -197,6 +197,7 @@ header{
     padding: 1em;
     transition: color 0.5s;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .item:hover{
